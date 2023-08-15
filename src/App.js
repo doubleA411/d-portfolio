@@ -5,9 +5,8 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import insta from "./assets/insta.png";
-import fb from "./assets/fb.png";
-import link from "./assets/link.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
       <div className="flex">
         <p className="text-3xl text-black font-extrabold">D</p>
       </div>
-      <p className="text-black text-center font-extrabold text-lg w-[297px] mt-12">
+      <p className="text-black text-center font-extrabold text-lg  mt-12 md:text-xl md:text-left md:w-[600px]">
         IM D, AN AI ENGINEER Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Aliquam dignissim lorem at tortor placerat.
       </p>
@@ -88,6 +87,75 @@ function App() {
             <ArrowRightIcon className="text-black" />
           </div>
         </div>
+      </div>
+      <div className="mb-[200px]"></div>
+      <div className="flex flex-col items-center gap-10">
+        <p className="text-black text-center font-extrabold text-lg">
+          TESTIMONIALS
+        </p>
+        <Carousel className="w-[287px] h-[295px]">
+          <div className="bg-black flex flex-col w-[287px] h-[295px] p-8 text-white gap-12 text-left">
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+          <div className="bg-black flex flex-col w-[287px] h-[295px] p-8 text-white gap-12 text-left">
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+          <div className="bg-black flex flex-col w-[287px] h-[295px] p-8 text-white gap-12 text-left">
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+        </Carousel>
+      </div>
+      <div className="mb-[200px]"></div>
+      <div className="flex flex-col gap-3">
+        <p className="text-black text-center font-extrabold text-lg mb-34">
+          MY BLOGS
+        </p>
+        <Carousel className="w-[300px] h-[400px]">
+          <div className="bg-black flex flex-col w-[300px] h-[400px] p-5 text-white justify-between">
+            <div className=" h-36 bg-white"></div>
+            <div className="flex items-center justify-between">
+              <p className="text-[10px] text-ellipsis">TITLE</p>
+              <ArrowRightIcon />
+            </div>
+          </div>
+          <div className="bg-black flex flex-col w-[300px] h-[400px] p-5 text-white justify-between">
+            <div className=" h-36 bg-white"></div>
+            <div className="flex items-center justify-between">
+              <p className="text-[10px] text-ellipsis">TITLE</p>
+              <ArrowRightIcon />
+            </div>
+          </div>
+        </Carousel>
       </div>
       <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px]">
