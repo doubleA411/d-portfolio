@@ -1,4 +1,10 @@
-import { ArrowRightIcon, ArrowDownIcon } from "@radix-ui/react-icons";
+import {
+  ArrowRightIcon,
+  ArrowDownIcon,
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
 import insta from "./assets/insta.png";
 import fb from "./assets/fb.png";
 import link from "./assets/link.png";
@@ -99,9 +105,9 @@ function App() {
         Copyright 2023 All Rights Reserved
       </p>
       <div className="flex gap-10 items-center">
-        <img className="w-[25px] h-[25px]" src={fb} alt="" />
-        <img className="w-[25px] h-[25px]" src={link} alt="" />
-        <img className="w-[25px] h-[25px]" src={insta} alt="" />
+        <GitHubLogoIcon />
+        <InstagramLogoIcon />
+        <LinkedInLogoIcon />
       </div>
     </div>
   );
