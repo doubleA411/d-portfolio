@@ -10,32 +10,40 @@ import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
-    <div className=" flex flex-col items-center m-7 gap-20">
-      <div className="flex">
+    <div className=" flex flex-col m-7  gap-20">
+      <div className="flex items-center justify-evenly text-xs font-bold">
         <p className="text-3xl text-black font-extrabold">D</p>
+        <p className="hidden md:block">About</p>
+        <p className="hidden md:block">Skills</p>
+        <p className="hidden md:block">Projects</p>
+        <p className="hidden md:block">Blogs</p>
+        <p className="hidden md:block">Testimonials</p>
       </div>
-      <p className="text-black text-center font-extrabold text-lg  mt-12 md:text-xl md:text-left md:w-[600px]">
-        IM D, AN AI ENGINEER Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit. Aliquam dignissim lorem at tortor placerat.
-      </p>
-      <div className=" bg-black text-white text-[10px] font-extrabold p-3">
-        GET IN TOUCH
-      </div>
-      <div className="flex flex-col items-center font-extrabold gap-4">
+
+      <div className="flex flex-col items-center font-extrabold gap-20">
+        <p className="text-black text-center font-extrabold text-lg  mt-12 md:text-2xl md:text-left md:w-[700px] md:mt-24">
+          IM D, AN AI ENGINEER Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aliquam dignissim lorem at tortor placerat.
+        </p>
+        <div className=" bg-black text-white text-[10px] font-extrabold p-3">
+          RESUME
+        </div>
         <p className="text-[12px]">SCROLL DOWN</p>
         <ArrowDownIcon />
       </div>
       <div className="mb-[100px]"></div>
-      <div className=" bg-black flex flex-col items-center p-12 gap-10">
-        <div className="bg-white w-[92px] h-[92px] rounded-full"></div>
-        <p className="text-white text-center text-sm xs:text-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          dignissim lorem at tortor placerat, eu facilisis dolor cursus. Aenean
-          risus ipsum, sodales sit amet aliquet eu
-        </p>
+      <div className="flex flex-col items-center">
+        <div className=" bg-black flex flex-col items-center p-12 gap-10 relative md:w-[900px] md:h-[500px]">
+          <div className="bg-white w-[92px] h-[92px] rounded-full md:absolute md:top-[-70px] md:shadow-lg md:w-[120px] md:h-[120px]"></div>
+          <p className="text-white text-center text-sm xs:text-md md:mt-10 md:font-bold md:text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dignissim lorem at tortor placerat, eu facilisis dolor cursus.
+            Aenean risus ipsum, sodales sit amet aliquet eu
+          </p>
+        </div>
       </div>
       <div className="mb-[200px]"></div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg">SKILLS</p>
         <div className="flex text-sm bg-black text-white p-4 justify-between w-[250px]">
           <p>SKILL 1</p>
@@ -59,7 +67,7 @@ function App() {
         </div>
       </div>
       <div className="mb-[200px]"></div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg">
           PROJECTS
         </p>
@@ -136,7 +144,7 @@ function App() {
         </Carousel>
       </div>
       <div className="mb-[200px]"></div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 items-center">
         <p className="text-black text-center font-extrabold text-lg mb-34">
           MY BLOGS
         </p>
@@ -158,24 +166,28 @@ function App() {
         </Carousel>
       </div>
       <div className="mb-[100px]"></div>
-      <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px]">
-        <div></div>
-        <p className="text-white text-center">
-          TELL ME ABOUT YOUR NEXT PROJECT
-        </p>
-        <div className="bg-white">
-          <p className="text-black text-[10px] font-extrabold p-2">
-            GET IN TOUCH
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px] md:w-[900px]">
+          <div></div>
+          <p className="text-white text-center md:w-96 md:text-2xl">
+            TELL ME ABOUT YOUR NEXT PROJECT
           </p>
+          <div className="bg-white">
+            <p className="text-black text-[10px] font-extrabold p-2">
+              GET IN TOUCH
+            </p>
+          </div>
         </div>
       </div>
-      <p className="text-[10px] text-center">
+      <p className="text-[10px] text-center md:text-md">
         Copyright 2023 All Rights Reserved
       </p>
-      <div className="flex gap-10 items-center">
-        <GitHubLogoIcon />
-        <InstagramLogoIcon />
-        <LinkedInLogoIcon />
+      <div className="flex flex-col items-center">
+        <div className="flex gap-10 items-center">
+          <GitHubLogoIcon className="md:w-8 md:h-8" />
+          <InstagramLogoIcon className="md:w-8 md:h-8" />
+          <LinkedInLogoIcon className="md:w-8 md:h-8" />
+        </div>
       </div>
     </div>
   );
