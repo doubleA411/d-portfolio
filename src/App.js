@@ -5,6 +5,7 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
+import dq from "./assets/dq.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -33,7 +34,7 @@ function App() {
       </div>
       <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center">
-        <div className=" bg-black flex flex-col items-center p-12 gap-10 relative md:w-[900px] md:h-[500px]">
+        <div className=" bg-black flex flex-col items-center p-12 gap-10 relative lg:w-[900px] md:w-[700px] md:h-[500px]">
           <div className="bg-white w-[92px] h-[92px] rounded-full md:absolute md:top-[-70px] md:shadow-lg md:w-[120px] md:h-[120px]"></div>
           <p className="text-white text-center text-sm xs:text-md md:mt-10 md:font-bold md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -98,10 +99,55 @@ function App() {
       </div>
       <div className="mb-[200px]"></div>
       <div className="flex flex-col items-center gap-10">
-        <p className="text-black text-center font-extrabold text-lg">
+        <p className="text-black text-center font-extrabold text-lg md:text-2xl">
           TESTIMONIALS
         </p>
-        <Carousel className="w-[287px] h-[295px]">
+
+        <div className="hidden  md:flex md:justify-evenly md:gap-3 xl:flex-row md:flex-col">
+          <div className="bg-black flex flex-col w-[400px] h-[295px] p-8 text-white gap-12 text-left relative">
+            <img className="absolute top-0 right-0 m-5" src={dq} alt="" />
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+          <div className="bg-black flex flex-col w-[400px] h-[295px] p-8 text-white gap-12 text-left relative">
+            <img className="absolute top-0 right-0 m-5" src={dq} alt="" />
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+          <div className=" bg-black flex flex-col w-[400px] h-[295px] p-8 text-white gap-12 text-left relative">
+            <img className="absolute top-0 right-0 m-5" src={dq} alt="" />
+            <div className="flex items-center gap-3">
+              <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
+              <div className="flex flex-col">
+                <p className="text-sm">NAME</p>
+                <p className="text-[10px] text-slate-500">role</p>
+              </div>
+            </div>
+            <p className="text-[12px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+              dignissim
+            </p>
+          </div>
+        </div>
+        <Carousel className="w-[287px] h-[295px] md:hidden">
           <div className="bg-black flex flex-col w-[287px] h-[295px] p-8 text-white gap-12 text-left">
             <div className="flex items-center gap-3">
               <div className="bg-white w-[50px] h-[50px] rounded-full"></div>
@@ -167,7 +213,7 @@ function App() {
       </div>
       <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center">
-        <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px] md:w-[900px]">
+        <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px] lg:w-[900px] md:w-[700px]">
           <div></div>
           <p className="text-white text-center md:w-96 md:text-2xl">
             TELL ME ABOUT YOUR NEXT PROJECT
