@@ -6,19 +6,25 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import dq from "./assets/dq.png";
+import dk from "./assets/dk.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 function App() {
   return (
-    <div className=" flex flex-col m-7  gap-20">
-      <div className="flex items-center justify-evenly text-xs font-bold">
-        <p className="text-3xl text-black font-extrabold">D</p>
-        <p className="hidden md:block">About</p>
-        <p className="hidden md:block">Skills</p>
-        <p className="hidden md:block">Projects</p>
-        <p className="hidden md:block">Blogs</p>
-        <p className="hidden md:block">Testimonials</p>
+    <div className=" flex flex-col m-7 gap-20">
+      <div className="sticky top-0 z-10 py-3">
+        <div className="flex flex-col items-center relative">
+          <div className="flex items-center justify-evenly text-xs font-extrabold bg-white rounded-full shadow-2xl p-3 w-[1000px] border-2">
+            {/* <p className="text-3xl text-black font-extrabold">D</p> */}
+            <img className="h-10" src={dk} alt=""/>
+            <p className="hidden md:block">ABOUT</p>
+            <p className="hidden md:block">SKILLS</p>
+            <p className="hidden md:block">PROJECTS</p>
+            <p className="hidden md:block">BLOGS</p>
+            <p className="hidden md:block">TESTIMONIALS</p>
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col items-center font-extrabold gap-20">
