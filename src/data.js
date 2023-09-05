@@ -27,14 +27,14 @@ const data = [
 ];
 
 const skills = [
-  "communication",
-  "collaboration",
-  "adaptability",
-  "python",
-  "data science",
-  "machine learning",
-  "iot",
-  "data analytics",
+  "Communication",
+  "Collaboration",
+  "Adaptability",
+  "Python",
+  "Data Science",
+  "Machine Learning",
+  "IoT",
+  "Data Analytics",
 ];
 
-export  { data, skills };
+export { data, skills };

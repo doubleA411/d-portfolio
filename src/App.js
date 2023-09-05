@@ -99,7 +99,7 @@ function App() {
         <div className="flex gap-4 flex-wrap items-center justify-center lg:w-[900px]">
           {skills.map((i) => {
             return (
-              <div className="flex text-sm bg-black text-white p-4 justify-between w-[250px] h-[100px]">
+              <div className="flex text-sm bg-black text-white p-4 justify-between w-[250px] h-[100px] rounded-lg font-extrabold items-center">
                 <p>{i}</p>
               </div>
             );
@@ -222,27 +222,7 @@ function App() {
         </Carousel>
       </div>
       <div className="mb-[200px]"></div>
-      <div className="flex flex-col gap-3 items-center">
-        <p className="text-black text-center font-extrabold text-lg mb-34">
-          MY BLOGS
-        </p>
-        <Carousel className="w-[300px] h-[400px]">
-          <div className="bg-black flex flex-col w-[300px] h-[400px] p-5 text-white justify-between">
-            <div className=" h-36 bg-white"></div>
-            <div className="flex items-center justify-between">
-              <p className="text-[10px] text-ellipsis">TITLE</p>
-              <ArrowRightIcon />
-            </div>
-          </div>
-          <div className="bg-black flex flex-col w-[300px] h-[400px] p-5 text-white justify-between">
-            <div className=" h-36 bg-white"></div>
-            <div className="flex items-center justify-between">
-              <p className="text-[10px] text-ellipsis">TITLE</p>
-              <ArrowRightIcon />
-            </div>
-          </div>
-        </Carousel>
-      </div>
+    
       <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px] lg:w-[900px] md:w-[700px] rounded-xl">
