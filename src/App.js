@@ -11,8 +11,19 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { HoverCard, Avatar, Box } from "@radix-ui/themes";
 import { data, skills } from "./data";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 function App() {
+  const bounceAnimation = {
+    y: [0, -20, 0], // Define keyframes for vertical motion
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeOut",
+    },
+  };
+
   return (
     <div className=" flex flex-col m-7 gap-20">
       <img className="h-10 w-10 lg:hidden" src={dk} alt="" />
@@ -21,11 +32,21 @@ function App() {
         <div className="flex flex-col items-center relative">
           <div className="flex items-center justify-evenly text-xs font-extrabold bg-white rounded-full shadow-2xl p-3 w-[1000px] border-2">
             <img className="h-10" src={dk} alt="" />
-            <p className="hidden md:block">ABOUT</p>
-            <p className="hidden md:block">SKILLS</p>
-            <p className="hidden md:block">PROJECTS</p>
-            <p className="hidden md:block">BLOGS</p>
-            <p className="hidden md:block">TESTIMONIALS</p>
+            <Link to="about" spy={true} smooth={true}>
+              <p className="hidden md:block cursor-pointer">ABOUT</p>
+            </Link>
+            <Link to="skills" spy={true} smooth={true}>
+              <p className="hidden md:block cursor-pointer">SKILLS</p>
+            </Link>
+            <Link to="projects" spy={true} smooth={true}>
+              <p className="hidden md:block cursor-pointer">PROJECTS</p>
+            </Link>
+            <Link>
+              <p className="hidden md:block cursor-pointer">BLOGS</p>
+            </Link>
+            <Link to="test" spy={true} smooth={true}>
+              <p className="hidden md:block cursor-pointer">TESTIMONIALS</p>
+            </Link>
           </div>
         </div>
       </div>
@@ -39,9 +60,25 @@ function App() {
           RESUME
         </div>
         <p className="text-[12px]">SCROLL DOWN</p>
-        <ArrowDownIcon />
+        <div className="flex justify-around">
+          <motion.div
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100"
+            transition={{
+              repeatType: "mirror",
+              repeat: Infinity,
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+            animate={{ y: ["100%", "-50%"] }}
+          >
+            <ArrowDownIcon />
+          </motion.div>
+        </div>
       </div>
-      <div className="mb-[100px]"></div>
+      <div class="about">
+        <div className="mb-[100px]"></div>
+      </div>
+
       <div className="flex flex-col items-center">
         <div className=" bg-black flex flex-col items-center p-12 gap-10 relative lg:w-[900px] md:w-[700px] md:h-[500px] rounded-xl">
           <div className="bg-white w-[92px] h-[92px] rounded-full md:absolute md:top-[-70px] md:shadow-lg md:w-[120px] md:h-[120px]"></div>
@@ -56,7 +93,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className="mb-[200px]"></div>
+      <div id="skills" className="mb-[200px]"></div>
       <div className="flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg">SKILLS</p>
         <div className="flex gap-4 flex-wrap items-center justify-center lg:w-[900px]">
@@ -69,7 +106,7 @@ function App() {
           })}
         </div>
       </div>
-      <div className="mb-[200px]"></div>
+      <div id="projects" className="mb-[200px]"></div>
       <div className=" flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg md:text-2xl">
           PROJECTS
@@ -92,7 +129,7 @@ function App() {
           })}
         </div>
       </div>
-      <div className="mb-[200px]"></div>
+      <div id="test" className="mb-[200px]"></div>
       <div className="flex flex-col items-center gap-10">
         <p className="text-black text-center font-extrabold text-lg md:text-2xl">
           TESTIMONIALS
