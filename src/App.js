@@ -13,6 +13,7 @@ import { HoverCard, Avatar, Box } from "@radix-ui/themes";
 import { data, skills } from "./data";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import LineSeparator from "./animation";
 
 function App() {
   const bounceAnimation = {
@@ -30,23 +31,35 @@ function App() {
 
       <div className="hidden lg:block sticky top-0 z-10 py-3">
         <div className="flex flex-col items-center relative">
-          <div className="flex items-center justify-evenly text-xs font-extrabold bg-white rounded-full shadow-2xl p-3 w-[1000px] border-2">
-            <img className="h-10" src={dk} alt="" />
-            <Link to="about" spy={true} smooth={true}>
-              <p className="hidden md:block cursor-pointer">ABOUT</p>
-            </Link>
-            <Link to="skills" spy={true} smooth={true}>
-              <p className="hidden md:block cursor-pointer">SKILLS</p>
-            </Link>
-            <Link to="projects" spy={true} smooth={true}>
-              <p className="hidden md:block cursor-pointer">PROJECTS</p>
-            </Link>
-            <Link>
-              <p className="hidden md:block cursor-pointer">BLOGS</p>
-            </Link>
-            <Link to="test" spy={true} smooth={true}>
-              <p className="hidden md:block cursor-pointer">TESTIMONIALS</p>
-            </Link>
+          <div className="flex items-center justify-between text-xs font-extrabold bg-white rounded-full shadow-2xl p-3 px-6 w-[1000px] border-2">
+            <img className="h-8" src={dk} alt="" />
+            <div className="flex gap-5 text-[10px]">
+              <Link to="about" spy={true} smooth={true}>
+                <p className="hidden md:block cursor-pointer hover:underline">
+                  ABOUT
+                </p>
+              </Link>
+              <Link to="skills" spy={true} smooth={true}>
+                <p className="hidden md:block cursor-pointer hover:underline">
+                  SKILLS
+                </p>
+              </Link>
+              <Link to="projects" spy={true} smooth={true}>
+                <p className="hidden md:block cursor-pointer hover:underline">
+                  PROJECTS
+                </p>
+              </Link>
+              <Link>
+                <p className="hidden md:block cursor-pointer hover:underline">
+                  BLOGS
+                </p>
+              </Link>
+              <Link to="test" spy={true} smooth={true}>
+                <p className="hidden md:block cursor-pointer hover:underline">
+                  TESTIMONIALS
+                </p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -93,20 +106,26 @@ function App() {
           </p>
         </div>
       </div>
-      <div id="skills" className="mb-[200px]"></div>
+      <div id="skills" className="mb-[100px]"></div>
+      <LineSeparator />
+      <div className="mb-[100px]"></div>
       <div className="flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg">SKILLS</p>
         <div className="flex gap-4 flex-wrap items-center justify-center lg:w-[900px]">
           {skills.map((i) => {
             return (
-              <div className="flex text-sm bg-black text-white p-4 justify-between w-[250px] h-[100px] rounded-lg font-extrabold items-center">
-                <p>{i}</p>
+              <div className="relative w-48 h-48 rounded-full border-8 border-black text-center text-[10px]">
+                <p className="absolute inset-0 flex items-center justify-center text-[12px] font-extrabold p-5">
+                  {i}
+                </p>
               </div>
             );
           })}
         </div>
       </div>
-      <div id="projects" className="mb-[200px]"></div>
+      <div id="projects" className="mb-[100px]"></div>
+      <LineSeparator />
+      <div className="mb-[100px]"></div>
       <div className=" flex flex-col gap-10 items-center">
         <p className="text-black text-center font-extrabold text-lg md:text-2xl">
           PROJECTS
@@ -129,7 +148,9 @@ function App() {
           })}
         </div>
       </div>
-      <div id="test" className="mb-[200px]"></div>
+      <div id="test" className="mb-[100px]"></div>
+      <LineSeparator />
+      <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center gap-10">
         <p className="text-black text-center font-extrabold text-lg md:text-2xl">
           TESTIMONIALS
@@ -222,7 +243,7 @@ function App() {
         </Carousel>
       </div>
       <div className="mb-[200px]"></div>
-    
+
       <div className="mb-[100px]"></div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center bg-black h-[372px] justify-evenly w-[298px] lg:w-[900px] md:w-[700px] rounded-xl">

@@ -14,11 +14,7 @@ const data = [
     desc: "Analyzing the netflix movie dataset and generating movie recommendations based on textual features. Preprocessed the data by cleaning and transforming text, focusing on titles and genres. TF-IDF vectorization is used to convert genre descriptions into numerical representations. The script calculates movie similarity using cosine similarity and builds a recommendation function. It provides personalized movie recommendations, with an example given for the given title.",
     url: "https://github.com/DHIWAHAR-K/Netflix-Recommendation-System",
   },
-  {
-    title: "Social Media Ads Classification",
-    desc: "The python script analyzes a social media marketing dataset to predict product purchases. It loads, explores, and visualizes the data to understand the relationship between age, estimated salary, and purchase outcomes. The script then splits the data into training and testing sets, employs a Decision Tree Classifier for prediction, and evaluates the model's performance using metrics like precision, recall, and F1-score. Overall, it aims to determine how age and estimated salary influence product purchasing decisions through social media marketing.",
-    url: "https://github.com/DHIWAHAR-K/Social-Media-Ads-Classification",
-  },
+
   {
     title: "Text Summarization",
     desc: "This application is designed for text reformulation. It integrates two powerful language models, BERT and GPT-2, to enhance and generate text creatively. Users input a sentence, and the script utilizes BERT for context understanding, predicting missing words within the sentence. These BERT predictions are then used as prompts for GPT-2, which generates reformed text, offering alternative versions of the input sentence. The app displays both the original user input and the reformed text, making it a valuable tool for content improvement and creative writing assistance. This interactive application seamlessly combines the strengths of these two language models to assist users in refining and enhancing their text content.",
